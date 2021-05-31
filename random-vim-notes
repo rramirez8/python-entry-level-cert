@@ -1,0 +1,84 @@
+URL to remember
+https://catswhocode.com/vim-commands/
+
+
+
+the :read command can insert a file or the result from running an external program into the current buffer. 
+to run a program, preface the shell command with ! (see :help :read!). for example,
+
+:read !date
+
+
+---------------------------------
+
+a filter is a program which reads text from standard input, then processes the text, and sends the result to standard output. 
+in vim, a range of lines can be selected, then replaced with the output from running a filter (the selected lines are the input to the filter).
+
+for example, the following text may appear in a file that is being edited:
+
+one,two,three,four,five
+arborist,apple,artichoke,ant,author
+branch,banana,broccoli,bee,book
+canopy,cherry,cabbage,cricket,codex
+
+the following procedure uses the cut utility (available on many unix-based systems) to replace each line with fields 2 to 3 inclusive:
+
+    on the first line, press v to start a visual selection.
+    press j to move the cursor down until all wanted lines are selected.
+    press ! (the command line will show :'<,'>! indicating that the selected range will be filtered).
+    enter a command to be executed by the shell, such as cut -f2-3 -d, (select fields 2-3 using comma as a delimiter between fields).
+
+vim saves the selected lines to a temporary file, then runs the external command with the temporary file as input. 
+the result from running the command replaces the selected lines. in this example, the result is:
+
+One,Two,Three,Four,Five
+arborist,apple,artichoke,ant,author
+branch,banana,broccoli,bee,book
+canopy,cherry,cabbage,cricket,codex
+
+---------------------------------------------
+
+you can use this feature to replace a command with its output. for example on windows if the buffer contains
+
+boolean-operators.py
+comparison-operator.py
+data.txt
+hello.py
+math-operations.py
+operator-priority.py
+random-vim-notes
+typecasting.py
+unary-bitwise-operators.py
+
+and you issue the command :%!cmd the five lines will be replaced with the output of the five commands.
+
+the same method can be used on unix with appropriate changes (for bash you would issue the command %!bash, and in this example the ping command would be ping -c 1). 
+
+
+!!ls
+boolean-operators.py
+comparison-operator.py
+data.txt
+hello.py
+math-operations.py
+operator-priority.py
+random-vim-notes
+typecasting.py
+unary-bitwise-operators.py
+
+> will indent when you highlight the row
+
+ctrl a to increment number
+ctrl x to decrement number
+1
+2
+3
+4
+5
+
+
+
+One,Two,Three,Four,Five
+arborist,apple,artichoke,ant,author
+branch,banana,broccoli,bee,book
+canopy,cherry,cabbage,cricket,codex
