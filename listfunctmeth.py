@@ -1,5 +1,13 @@
 #! /usr/bin/python
 
+# functions for lists
+# append
+# insert
+# index
+# in / not in
+# sorted
+# reversed, must cast back using list cast
+
 # create at list
 mylist = [1,2,3]
 
