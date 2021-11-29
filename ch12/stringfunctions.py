@@ -11,3 +11,6 @@ print("upper: ", mystr.upper())
 print("capitalize: ", mystr.capitalize())
 print("title: ", "hello hello hello".title())
 
+print("next look at some boolean methods")
+print("isascii: ", mystr.isascii())
+
