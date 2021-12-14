@@ -60,5 +60,3 @@ print(mylist)
 
 
 
-
-
