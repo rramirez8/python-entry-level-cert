@@ -15,3 +15,7 @@ for key, value in ages.items():
     print("The key is: " + key)
     print("The value is: " + str(value))
 
+# for loop using string
+for letter in "Hello Baby, whats happening hot stuff":
+    print(letter)
+
