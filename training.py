@@ -11,11 +11,11 @@ def do_dict_stuffs():
     
     # get value using key
     print(ages['Kevin'])
-    
+        
     # add new entry
     ages['Kayla'] = 21
     print(ages)
-    
+
     # update entry
     ages['Kevin'] = 60
     print(ages)
