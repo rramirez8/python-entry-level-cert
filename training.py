@@ -36,6 +36,7 @@ def do_dict_stuffs():
     colors = dict([('kevin','blue'),('bob','green'),('kayla','red')])
     print(colors)
 
+    
 # -------- main ----------
 if __name__ == "__main__":
     hw('Richard')
